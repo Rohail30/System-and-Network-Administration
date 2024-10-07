@@ -1,76 +1,58 @@
-# CentOS System and Network Administration - Basic Commands
+# CentOS 
 
-In this guide, we cover some essential CentOS commands learned in the System and Network Administration class.
+## CentOS Overview
+CentOS (Community ENTerprise Operating System) is a free, open-source Linux distribution based on Red Hat Enterprise Linux (RHEL). It offers full compatibility with RHEL without subscription costs and is commonly used for web hosting, cloud computing, and enterprise applications due to its stability and long-term support.
 
-## 1. `su root`
-The `su` command stands for "substitute user" and is used to switch to another user. The most common use is switching to the root user to gain administrative privileges.
+## `su root` Command
+The subtitute user `su` command in CentOS lets users switch to the root (administrator) account, which has full system privileges for tasks like software installation, file management, and system configuration.
 
-```bash
-~ su root
-password:
+### Command Syntax:
 ```
-- After entering the `su root` command, you will be prompted for the root password. Once entered, your shell prompt changes, indicating you have root access.
-
-## 2. `cd` - Change Directory
-The `cd` command is used to navigate between directories.
-
-### Example 1:
-```bash
-# cd
-# pwd
+su root
 ```
-- `cd`: Navigates to the current user's home directory.
-- `pwd`: Prints the working directory. This confirms your current location in the file system.
 
-### Example 2:
-```bash
-# cd /
-# pwd
 ```
-- `cd /`: Changes to the root directory.
-- `pwd`: Verifies that the current directory is `/`.
-
-### Example 3:
-```bash
-# cd /home/
-# pwd
+$ su root
+Password: ********
+#
 ```
-- `cd /home/`: Navigates to the `/home/` directory.
-- `pwd`: Confirms your location as `/home/`.
+Once logged in as root, you can perform administrative tasks like installing packages or modifying system settings.
 
-### Example 4:
-```bash
-# cd ..
-# pwd
-```
-- `cd ..`: Moves up one directory level.
-- `pwd`: Verifies your current directory after moving up.
+## Shell and System Commands
 
-### Example 5:
-```bash
-# cd ~
-# pwd
-```
-- `cd ~`: Navigates back to the current user’s home directory.
-- `pwd`: Prints the working directory to verify your location.
+### Basic Shell Commands
+1. `exit` - Exits the current shell session.
+2. `ls` - Lists files and directories in the current directory.
+3. `pwd` - Displays the current working directory path.
+4. `cd` - Changes the current working directory.
+5. `man` - Displays the manual or help for a command.
 
-## 3. `cat` - View File Content
-The `cat` command is used to display the contents of a file. In this case, it is used to read system configuration files.
+### Relative Directories
+1. `.` - Refers to the current directory.
+2. `..` - Refers to the parent directory.
+3. `~` - Refers to the home directory.
+4. `~username` - Refers to the home directory of the specified user.
+5. `~/Desktop` - Refers to the Desktop directory inside the home folder.
 
-```bash
-# cat /etc/passwd
-```
-- Displays the contents of the `/etc/passwd` file, which contains user account information on the system.
+### Directory Management Commands
+1. `ls` - Lists files and directories.
+2. `pwd` - Prints the current directory path.
+3. `cd` - Changes the working directory.
+4. `mkdir` - Creates a new directory.
+5. `rmdir` - Removes an empty directory.
 
-## 4. Navigating to Specific Directories
+### Shell/System Commands
+1. `man` or `info` - Shows the manual pages for commands.
+2. `clear` - Clears the terminal screen.
+3. `exit` - Closes the shell session.
+4. `date` - Displays or sets the system date and time.
+5. `cal` - Displays a calendar for a month or a year.
+6. `uname` - Displays system information (e.g., OS name).
 
-```bash
-# cd /etc/sysconfig/
-```
-- This command moves to the `/etc/sysconfig/` directory, which contains configuration files for various system services.
+### File Commands
+1. `cp` - Copies files or directories.
+2. `mv` - Moves or renames files or directories.
+3. `rm` - Removes (deletes) files or directories.
+4. `touch` - Creates a new empty file or updates the timestamp of an existing file.
 
----
-
-These commands form the foundation of basic system navigation and file manipulation in CentOS, essential for managing and administering the system effectively.
-```
 
