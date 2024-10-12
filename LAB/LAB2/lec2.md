@@ -60,7 +60,7 @@ The third set of three characters (`r-x` in `drwxr-xr-x`) represents the permiss
 | `-`    | No permission | N/A     |
 
 
-## Linux User and Permissions Cheat Sheet
+# Linux User and Permissions Cheat Sheet
 
 ## List Users and Groups:
 
@@ -116,4 +116,51 @@ The third set of three characters (`r-x` in `drwxr-xr-x`) represents the permiss
 * **`chown :testgroup myfile.txt`** - Changes the group of a file.
 * **`chown testuser:testgroup myfile.txt`** - Changes the ownership of a file and group.
 * **`chown -R testuser:testgroup myfolder`** - Changes the ownership of folders and subfolders recursively.
+
+# Linux Command Line Notes
+
+This document provides an overview of commonly used Linux commands and their functionalities.
+
+## Basic Commands
+
+- `~ls`: Lists files and directories in the current working directory.
+- `~ls -l`: Lists files with detailed information including permissions, ownership, size, and modification time.
+- `~ls -a`: Lists all files including hidden files (those starting with a dot).
+- `~ls -al`: Lists all files (including hidden files) with detailed information.
+- `~ls -ltr`: Lists files in long format, sorted by modification time in reverse order (newest last).
+- `~ls -ltra`: Lists all files (including hidden) in long format, sorted by modification time in reverse order.
+- `~grep folder`: Searches for the term "folder" within files or output.
+- `~ls -ltra | grep folder`: Lists all files (including hidden), sorted by modification time, and filters the output for the term "folder".
+- `~ls -C`: Lists files in columns.
+- `~ls -ltrC`: Lists files in long format, sorted by modification time in reverse order, and displays them in columns.
+- `~man ls`: Opens the manual (documentation) for the `ls` command.
+
+## Navigating Directories
+
+- `~cd /etc/sysconfig/`: Changes the current directory to `/etc/sysconfig/`.
+- `~cd`: Changes the directory to the user's home directory.
+- `~echo $OLDPWD`: Prints the previous working directory.
+- `~printenv`: Prints all environment variables.
+
+## Working with Files
+
+- `~ls /bin`: Lists the contents of the `/bin` directory.
+- `~echo "hello world 2" >> file`: Appends the string "hello world 2" to a file called `file`.
+- `~cat file`: Displays the contents of the file `file`.
+- `~which cat`: Shows the full path of the `cat` command.
+- `~which more`: Shows the full path of the `more` command.
+
+## Network & System Operations
+
+- `ping 8.8.8.8`: Sends ICMP packets to the IP address `8.8.8.8` to test network connectivity.
+- `su root`: Switches the user to the root account.
+- `yum install tree`: Installs the `tree` package (used for viewing directory structures).
+
+## File Permissions
+
+- `~umask`: Displays the current file creation mask (default permission settings).
+- `~umask 002`: Sets the umask to `002`, which grants read and write permissions to the group.
+
+---
+
 
