@@ -156,11 +156,6 @@ This document provides an overview of commonly used Linux commands and their fun
 - `su root`: Switches the user to the root account.
 - `yum install tree`: Installs the `tree` package (used for viewing directory structures).
 
-## File Permissions
-
-- `~umask`: Displays the current file creation mask (default permission settings).
-- `~umask 002`: Sets the umask to `002`, which grants read and write permissions to the group.
-
 ---
 
 
