@@ -158,6 +158,6 @@ Let's break down a few examples:
 ## Summary
 
 This line provides a detailed view of the file's permissions, ownership, size, modification date, and file name, which is essential for managing access and understanding file attributes in a Linux environment.
-```
+
 
 
